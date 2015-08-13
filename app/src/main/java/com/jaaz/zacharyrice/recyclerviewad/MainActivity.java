@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         String[] data = {"ksjdahfjak;","feawjkhfew","flosujfeka","hjgweafiwaf",
+                        "oneahfewa", "mowaforw", "hfejwafewa","fewalfuewaf",
+                        "ksjdahfjak;","feawjkhfew","flosujfeka","hjgweafiwaf",
                         "oneahfewa", "mowaforw", "hfejwafewa","fewalfuewaf"};
 
         mRV = (RecyclerView) findViewById(R.id.recyclerview);
@@ -33,9 +35,4 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
-
-
-
-
 }

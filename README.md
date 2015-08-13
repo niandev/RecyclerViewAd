@@ -1,15 +1,19 @@
 # RecyclerViewAd
 ### Description
-RecyclerViewAd is an example application that displays an embedded AdView inside a RecyclerView. 
+RecyclerViewAd is an example application that displays an embedded AdView inside a RecyclerView. Example App on the Google Play Store:
+https://play.google.com/store/apps/details?id=com.jaaz.zacharyrice.recyclerviewad
+
 
 Usage
 -----
 First you need to add the required dependencies:
 
-```dependencies {
+```
+dependencies {
     compile 'com.android.support:recyclerview-v7:22.2.1'
     compile 'com.google.android.gms:play-services-ads:7.5.0'
-}```
+}
+```
 
 How to implement AdView in a RecyclerView?
 ------------------------------------------
@@ -61,16 +65,19 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     ...
     ...
-}```
+}
 
+```
 In the custom Adapter we can choose the frequency of AdViews that are being displayed by Overriding getItemViewType. Below I set the freqency of adviews at 1 every 6 rows starting at the 4th row.
+
 ```
     @Override
     public int getItemViewType(int position) {
         if (position % 6 == 3)
             return AD_TYPE;
         return CONTENT_TYPE;
-    }```
+    }
+```
 
 To make sure we don't crash our app when we assign values to the rows do the following. This will make sure we are only assigning values to valid views. 
 ```
@@ -82,7 +89,8 @@ To make sure we don't crash our app when we assign values to the rows do the fol
     }
 ```
 
-Now in the onCreateViewHolder method we need to make sure we load everything correctly:
+Now in the onCreateViewHolder method we need to make sure we load everything correctly. Be sure to add a strings.xml file in your res/values directory so that the getString(R.string.aduid) works!
+
 ```
     @Override
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,

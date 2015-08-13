@@ -27,9 +27,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
         public TextView mTextView;
-
         public ViewHolder(View v) {
             super(v);
             if (!(itemView instanceof AdView)) {
