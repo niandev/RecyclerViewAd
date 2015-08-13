@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">RecyclerviewAd</string>
-
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="aduid">ca-app-pub-9009391013934481/7802277228</string>
-</resources>
